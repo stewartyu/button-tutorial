@@ -69,6 +69,8 @@ Then, open `Calendar/Info.plist` and paste in the `LSApplicationQueriesSchemes`.
 
 Awesome! With the setup complete, let's get on with the integration.
 
+If you had any problems with the setup, check out this branch with the setup steps complete: [https://github.com/stewartyu/calendar-app/tree/skip-setup](https://github.com/stewartyu/calendar-app/tree/skip-setup)
+
 ## 2. Configure Your Button
 
 Next, let’s set up the Uber integration in your Button Dashboard. Don’t have an account? [Create one for free at app.usebutton.com](http://app.usebutton.com)!
