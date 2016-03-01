@@ -1,6 +1,6 @@
 # Hail an Uber for your App Users in under 20 Lines of Code
 
-We all know that the key to building a loyal following for your app is to delight your users. Help a forgetful boyfriend make an OpenTable reservation for the big anniversary, or save someone from arriving late by hailing them an Uber — they’ll never forget your app!
+We all know that the key to building a loyal following for your app is to delight your users. Help a forgetful boyfriend make an OpenTable reservation for the big anniversary, or save someone from arriving late by hailing them an Uber — they’ll keep coming back to your app!
 
 [Button](http://www.usebutton.com) provides a simple SDK for iOS and Android that lets your users transact with Ticketmaster, Uber, OpenTable, AirBnb and more — all without leaving your app. Best of all: it's free, AND you get a share of any revenue driven!
 
