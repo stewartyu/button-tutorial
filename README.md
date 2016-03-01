@@ -148,6 +148,8 @@ Next, add the following code to the `viewDidLoad` function to set the context fo
           })
       }
 
+Want to check your work? Check out this commit for reference: [https://github.com/stewartyu/calendar-app/commit/e6947d86f7beef5a8bd82343b61f6cdc782667a6](https://github.com/stewartyu/calendar-app/commit/e6947d86f7beef5a8bd82343b61f6cdc782667a6)
+
 That's it! Run your project and now, your users can get a few minutes of meditation in their Uber on their way to yoga class! They'll thank you for making their lives easier, while you benefit from a new way of monetizing your app — it's win-win!
 
 ![Final Uber Integration](final-integration.gif)
