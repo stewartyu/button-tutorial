@@ -2,13 +2,13 @@
 
 We all know that the key to building a loyal following for your app is to delight your users. Help a forgetful boyfriend make an OpenTable reservation for the big anniversary, or save someone from arriving late by hailing them an Uber — they’ll never forget your app!
 
-[Button](http://www.usebutton.com) provides a simple SDK for iOS and Android that lets your users transact with Ticketmaster, Uber, OpenTable, AirBnb and more — all without leaving your app. Best of all, you get a share of any revenue driven.
+[Button](http://www.usebutton.com) provides a simple SDK for iOS and Android that lets your users transact with Ticketmaster, Uber, OpenTable, AirBnb and more — all without leaving your app. Best of all: it's free, AND you get a share of any revenue driven!
 
-Ready to get started?
+Join the thousands of app developers who have added Button integrations like this:
 
 ![Final Uber Integration](final-integration.gif)
 
-In this tutorial, we’ll integrate the Uber Commerce Card into your iOS app in 20 lines of code! The future is now. Let's do it!
+In this tutorial, we’ll integrate Button's Uber Commerce Card into your iOS app in 20 lines of code — no joke. The future is now. Let's do it!
 
 ## 1. Setup Project
 
@@ -55,7 +55,7 @@ Once that’s done, you’ll find a new file called `Calendar.xcworkspace` — o
 
 ### Update Info.plist
 
-Button’s power comes from integrating with apps that your users already have installed — in this case, their Uber app. The heavy lifting has already been done by Uber, so they’re already signed in, have their preferences and payment methods stored, ready to be used in your app!
+Button’s power comes from integrating with apps that your users already have installed — in this case, their Uber app. The heavy lifting has already been done by Uber, so they’re already signed in, have their preferences and payment methods stored, ready for a quick and painless transaction with your app!
 
 To let your app query if other apps are installed, iOS9 requires you to declare the scheme in your `Info.plist` file.
 
@@ -77,7 +77,7 @@ In the Button dashboard, click the **Add a Button** link in the sidebar to creat
 
 ![Add a Button](add-a-button.png)
 
-Under **Name your Button**, give a name like "Calendar View Uber Button":
+Under **Name your Button**, give a name — I'm using "Calendar View Uber Button":
 
 ![Name your Button](name-your-button.gif)
 
@@ -89,7 +89,7 @@ Under **Select a use case**, choose **Uber**. Then, scroll to the bottom of the 
 
 ![Select a use case](select-a-use-case.gif)
 
-Great! You’ve finished configuring your Button. Take note of your Button ID and Application ID — you'll need it for this final step of adding the Button to your app!
+Great! You’ve finished configuring your Button in the dashboard. Take note of your Button ID and Application ID — you'll need it for this final step of adding the Button to your app!
 
 ## 3. Add the Button to your App
 
@@ -101,7 +101,7 @@ First, you’ll have to import the Button library. At the top of the file, add:
 
      import Button
 
-Next, in the `application` function, allow Button to request location permissions, and configure Button with your Application ID:
+Next, in the `application` function, allow Button to request location permissions (so that Uber knows the pickup location), and configure Button with your Application ID with the following code:
 
       Button.allowButtonToRequestLocationPermission(true)
 
@@ -125,7 +125,7 @@ Next, change the UIView’s class to `BTNDropinButton` and set the **Button Id**
 
 ![Set Button ID](set-button-id.gif)
 
-Now, link up your new Button to your application code. First, Enable Assistant Editor mode, by selecting **View > Assistant Editor > Show Assistant Editor**. Then, Control+Click the Button UIView and drag it to your application code for `Calendar/ViewController.swift`.
+Now, link up your new button to your application code. First, Enable Assistant Editor mode, by selecting **View > Assistant Editor > Show Assistant Editor**. Then, Control+Click the Button UIView and drag it to your application code for `Calendar/ViewController.swift`.
 
 In the popup, give your button a name like "dropinButton". You'll use this variable name in your application code.
 
@@ -135,7 +135,7 @@ In `Calendar/ViewController.swift`, you’ll have to import the Button library. 
 
      import Button
 
-Next, add the following code to the `viewDidLoad` function to set the context for your Uber button. You can set the location to be the user's destination, but for now we'll hardcode this location.
+Next, add the following code to the `viewDidLoad` function to set the context for your Button. You can set the location to be the user's destination, but for now we'll hardcode this location.
 
       let location: BTNLocation = BTNLocation.init(name: "Yoga", latitude: 40.723027, longitude: -73.9956459);
       let context: BTNContext = BTNContext.init(subjectLocation: location);
@@ -146,8 +146,12 @@ Next, add the following code to the `viewDidLoad` function to set the context fo
           })
       }
 
-That's it! Run your project and now, your users can get a few minutes of meditation in their Uber on their way to yoga class!
+That's it! Run your project and now, your users can get a few minutes of meditation in their Uber on their way to yoga class! They'll thank you for making their lives easier, while you benefit from a new way of monetizing your app — it's win-win!
 
 ![Final Uber Integration](final-integration.gif)
 
 *****
+
+Now that you've successfully integrated Uber into your app, check out the Button Marketplace in your Dashboard to see what other integrations suit your users. Or, check out our [integration guide](https://www.usebutton.com/developers/ios-guide/integration-guide) for more options on customizing your Button.
+
+Having trouble? No problem — it's totally normal to run into a snag when using a new SDK for the first time! Take a look at our [troubleshooting guides](https://www.usebutton.com/support/troubleshooting) or give us a shout at [support@usebutton.com](mailto:support@usebutton.com) and we'll be happy to lend a hand.
